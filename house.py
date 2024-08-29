@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 
 # Load the trained model
-with open('C:\\Users\\Prasad\\Machine Learning\\Supervised learning\\Project_Predicting House Prices\\model.pkl', 'rb') as f:
+with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 # Function to make predictions
