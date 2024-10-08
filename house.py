@@ -1,10 +1,14 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import os
 
-# Load the trained model
-with open('model.pkl', 'rb') as f:
-    model = pickle.load(f)
+model_path = '/workspaces/House_Price_Prediction/model.pkl'  
+if os.path.exists(model_path):
+    with open(model_path, 'rb') as f:
+        model = pickle.load(f)
+else:
+    raise FileNotFoundError(f"The model file was not found at: {model_path}")
 
 # Function to make predictions
 def make_prediction(features):
