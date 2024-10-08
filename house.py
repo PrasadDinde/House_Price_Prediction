@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 import os
 
-model_path = '/workspaces/House_Price_Prediction/model.pkl'  
+model_path = 'model.pkl'  
 if os.path.exists(model_path):
     with open(model_path, 'rb') as f:
         model = pickle.load(f)
